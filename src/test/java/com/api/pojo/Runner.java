@@ -12,7 +12,7 @@ public class Runner {
 	 System.out.println(data);
 	}
 	
-	 public static  String convertPOJOToJSON (LoginApiPojo data) {
+	 public static  String convertPOJOToJSON (Object data) {
 		 Gson gson = new Gson();
 		 String result = gson.toJson(data); 
 		 return result;
