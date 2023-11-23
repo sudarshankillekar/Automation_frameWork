@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-24T00:35:57 IST" name="Default suite" finished-at="2023-11-24T00:36:04 IST" duration-ms="6280">
+    <groups>
+    </groups>
+    <test started-at="2023-11-24T00:35:57 IST" name="Default test" finished-at="2023-11-24T00:36:04 IST" duration-ms="6280">
+      <class name="com.api.tests.CreateJobApiRequest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.CreateJobApiRequest@662b4c69]" started-at="2023-11-24T00:35:57 IST" name="setup" finished-at="2023-11-24T00:35:58 IST" duration-ms="743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Test_api_create_joB()[pri:0, instance:com.api.tests.CreateJobApiRequest@662b4c69]" started-at="2023-11-24T00:35:58 IST" name="Test_api_create_joB" finished-at="2023-11-24T00:36:04 IST" duration-ms="5429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_api_create_joB -->
+      </class> <!-- com.api.tests.CreateJobApiRequest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
