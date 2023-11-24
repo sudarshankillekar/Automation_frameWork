@@ -13,7 +13,13 @@ import com.api.pojo.customer_address;
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 
+import io.restassured.response.ValidatableResponse;
+
 public class Testutility {
+	
+	
+	public static ValidatableResponse Job_Id ;
+	
 	 public static  String convertPOJOToJSON (Object data) {
 		 Gson gson = new Gson();
 		 String result = gson.toJson(data); 

@@ -10,6 +10,7 @@ import java.sql.Time;
 
 import org.hamcrest.Matchers;
 import org.hamcrest.core.StringContains;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,7 @@ import io.restassured.response.Response;
 
 public class LoginApiTest {
 	
+	JsonPath jsonPath;
 	@BeforeMethod
 	public void setup() throws IOException {
 		baseURI = getPropertFrom("qa.properties","BASE_URL");
@@ -30,7 +32,7 @@ public class LoginApiTest {
 	
 	@Test(description = "verify login using api request and check message as Success")
 	public void loginApiTest() throws IOException {
-	    given()
+	 jsonPath =    given()
 		.header(new Header("Content-Type", "application/json"))
 		.body(convertPOJOToJSON(new LoginApiPojo("iamfd", "password")))
 		.when()
@@ -41,7 +43,11 @@ public class LoginApiTest {
 		      .assertThat()
 		      .statusCode(200)
 	          .time(Matchers.lessThan(5000L))
-	          .body(Matchers.containsString("Success"));
+	          .extract().jsonPath();
+	    
+	    Assert.assertEquals(jsonPath.getString("message"),"Success");
+	    Assert.assertTrue(jsonPath.getString("data.token")!=null);
+	    
 	
        
  

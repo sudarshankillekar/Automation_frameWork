@@ -6,6 +6,7 @@
       <class name="com.api.tests.LoginApiTest">
         <methods>
           <include name="loginApiTest"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.api.tests.LoginApiTest -->
     </classes>
