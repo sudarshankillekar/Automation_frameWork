@@ -22,7 +22,7 @@ public class LoginApiRequest {
 	Response response = given()
 		.header(new Header("Content-Type", "application/json"))
 		.body(convertPOJOToJSON(new LoginApiPojo("iamfd", "password")))
-		.post("/login");		
+		.post("login");		
         System.out.println(response.asPrettyString());
         System.out.println(response.getStatusCode());
         System.out.println(response.getTime());

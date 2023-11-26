@@ -21,13 +21,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 
-public class LoginApiTest {
+public final class LoginApiTest extends  ApiTestBase {
 	
 	JsonPath jsonPath;
-	@BeforeMethod
-	public void setup() throws IOException {
-		baseURI = getPropertFrom("qa.properties","BASE_URL");
-	}
 	
 	
 	@Test(description = "verify login using api request and check message as Success")
@@ -37,7 +33,7 @@ public class LoginApiTest {
 		.body(convertPOJOToJSON(new LoginApiPojo("iamfd", "password")))
 		.when()
 		      .log().all()
-		      .post("/login")
+		      .post("login")
 		 .then()
 		      .log().all()
 		      .assertThat()
