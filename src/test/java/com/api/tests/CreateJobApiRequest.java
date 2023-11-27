@@ -22,16 +22,20 @@ import com.util.Testutility;
 
 import static com.util.Testutility.*;
 
+import io.restassured.RestAssured;
 import io.restassured.http.Header;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBodyExtractionOptions;
+import io.restassured.response.ValidatableResponse;
 
 public final class CreateJobApiRequest extends ApiTestBase  {
-	
-		
+JsonPath jsonPath;
+private static String jobId;		
 
 	 @Test
 	 public void Test_api_create_joB() {
-		 Job_Id = 	 given()
+		     given()
 			.header(new Header("Content-Type", "application/json")).header(new Header("Authorization", getAuthToken(ROLE.FD)))
 			.body(Testutility.getCreateJobBodyRequest())
 			.when()
@@ -47,7 +51,9 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 							     .body("message", equalTo("Job created successfully. "))
 							     .body("data.id", notNullValue()) 
 							     .body("data.tr_customer_product_id", notNullValue()) 
-							     .body("data.tr_customer_id", notNullValue()); 		     
-	}
+							     .body("data.tr_customer_id", notNullValue());
+		 
+		                       
+	 }
 
 }

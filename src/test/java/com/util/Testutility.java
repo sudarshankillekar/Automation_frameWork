@@ -26,7 +26,15 @@ import io.restassured.response.ValidatableResponse;
 public class Testutility {
 	JsonPath jsonPath;
 	
-	public static ValidatableResponse Job_Id ;
+	  public static String Jobid;
+
+	    public static String getJobID() {
+	        return Jobid;
+	    }
+
+	    public static void setJobID(String id) {
+	    	Jobid = id;
+	    }
 	
 	 public static  String convertPOJOToJSON (Object data) {
 		 Gson gson = new Gson();
