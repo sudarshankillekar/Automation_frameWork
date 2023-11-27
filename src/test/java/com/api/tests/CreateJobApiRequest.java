@@ -47,7 +47,8 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 							     .body("message", equalTo("Job created successfully. "))
 							     .body("data.id", notNullValue()) 
 							     .body("data.tr_customer_product_id", notNullValue()) 
-							     .body("data.tr_customer_id", notNullValue()); 		     
+							     .body("data.tr_customer_id", notNullValue()); 	
+//		 gdhfh
 	}
 
 }
