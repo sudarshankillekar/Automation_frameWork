@@ -19,6 +19,7 @@ import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 
 import io.restassured.http.Header;
+import io.restassured.mapper.ObjectMapper;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -26,7 +27,10 @@ import io.restassured.response.ValidatableResponse;
 public class Testutility {
 	JsonPath jsonPath;
 	
-	public static ValidatableResponse Job_Id ;
+	
+	public static int jobId ;
+	
+	
 	
 	 public static  String convertPOJOToJSON (Object data) {
 		 Gson gson = new Gson();
@@ -84,4 +88,6 @@ public class Testutility {
 	     String Token = 	 jsonpath.getString("data.token");
 	     return Token;
 }
+
+	
 }

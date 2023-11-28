@@ -2,23 +2,23 @@ package com.api.pojo;
 
 public class SearchjobApirequest {
 
-	private int Search_job ;
+	private int searchText ;
 
 	public SearchjobApirequest(int search_job) {
 		super();
-		Search_job = search_job;
+		searchText = search_job;
 	}
 
 	public int getSearch_job() {
-		return Search_job;
+		return searchText;
 	}
 
 	public void setSearch_job(int search_job) {
-		Search_job = search_job;
+		searchText = searchText;
 	}
 
 	@Override
 	public String toString() {
-		return "SearchjobApirequest [Search_job=" + Search_job + "]";
+		return "SearchjobApirequest [searchText=" + searchText + "]";
 	}
 }
