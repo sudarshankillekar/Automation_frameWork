@@ -2,10 +2,10 @@ package com.connectToDB;
 
 public class StudentPOJO {
 	
-	private int name;
+	private String name;
 	private int id;
 	private int marks;
-	public StudentPOJO(int name, int id, int marks) {
+	public StudentPOJO(String name, int id, int marks) {
 		super();
 		this.name = name;
 		this.id = id;
@@ -15,10 +15,10 @@ public class StudentPOJO {
 	public String toString() {
 		return "StudentPOJO [name=" + name + ", id=" + id + ", marks=" + marks + "]";
 	}
-	public int getName() {
+	public String getName() {
 		return name;
 	}
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	public int getId() {

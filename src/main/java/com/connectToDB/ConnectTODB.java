@@ -14,12 +14,12 @@ public class ConnectTODB {
 		Connection connection = DriverManager.getConnection("jdbc:mysql://139.59.91.96:3306/SR_DEV", "produser", "qweQWe123!");
         Statement statement = connection.createStatement();
         ResultSet result  =  statement.executeQuery("SELECT *FROM SR_DEV.student WHERE id  = 1001;");
-        StudentPOJO studentPOJO = null;
+       // StudentPOJO studentPOJO2;
         while(result.next()) {
-        	StudentPOJO StudentPOJO = new StudentPOJO(result.getInt(1), result.getInt(2), result.getInt(3));
+        	 StudentPOJO studentPOJO21 = new StudentPOJO(result.getString(1), result.getInt(2), result.getInt(3));
         }
         
-        System.out.println(result);
+//        System.out.println(StudentPOJO.getName());
 	}
 
 }
