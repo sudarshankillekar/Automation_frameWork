@@ -13,13 +13,13 @@ public class ConnectTODB {
 		
 		Connection connection = DriverManager.getConnection("jdbc:mysql://139.59.91.96:3306/SR_DEV", "produser", "qweQWe123!");
         Statement statement = connection.createStatement();
-        ResultSet result  =  statement.executeQuery("SELECT *FROM SR_DEV.student WHERE id  = 1001;");
-       // StudentPOJO studentPOJO2;
+        ResultSet result  =  statement.executeQuery("SELECT *FROM SR_DEV.mst_warrenty_status WHERE id =2 ;");
+        mst_warrenty_status_pojo warrenty_status = null;
         while(result.next()) {
-        	 StudentPOJO studentPOJO21 = new StudentPOJO(result.getString(1), result.getInt(2), result.getInt(3));
+        	 warrenty_status = new mst_warrenty_status_pojo(result.getInt(1), result.getString("name"),result.getString("code"), result.getString("description"), result.getInt(1));
         }
         
-//        System.out.println(StudentPOJO.getName());
+       System.out.println(warrenty_status);
 	}
 
 }

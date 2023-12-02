@@ -11,10 +11,7 @@ public class StudentPOJO {
 		this.id = id;
 		this.marks = marks;
 	}
-	@Override
-	public String toString() {
-		return "StudentPOJO [name=" + name + ", id=" + id + ", marks=" + marks + "]";
-	}
+
 	public String getName() {
 		return name;
 	}
@@ -34,6 +31,9 @@ public class StudentPOJO {
 		this.marks = marks;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "StudentPOJO [name=" + name + ", id=" + id + ", marks=" + marks + "]";
+	}
 
 }
