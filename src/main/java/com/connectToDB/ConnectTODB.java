@@ -16,7 +16,7 @@ public class ConnectTODB {
         ResultSet result  =  statement.executeQuery("SELECT *FROM SR_DEV.mst_warrenty_status WHERE id =2 ;");
         mst_warrenty_status_pojo warrenty_status = null;
         while(result.next()) {
-        	 warrenty_status = new mst_warrenty_status_pojo(result.getInt(1), result.getString("name"),result.getString("code"), result.getString("description"), result.getInt(1));
+        	 warrenty_status = new mst_warrenty_status_pojo(result.getInt(1), result.getString("name"),result.getString("code"), result.getString("description"), result.getInt(1),result.getDate("created_at"),result.getDate("modified_at"));
         }
         
        System.out.println(warrenty_status);

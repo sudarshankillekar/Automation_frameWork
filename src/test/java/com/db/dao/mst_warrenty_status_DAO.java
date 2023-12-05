@@ -27,9 +27,10 @@ public class mst_warrenty_status_DAO {
 	
 	public mst_warrenty_status_pojo getmst_warrenty_status_byID(int id) {
 		  try {
-			ResultSet result  =  statement.executeQuery("SELECT *FROM SR_DEV.mst_warrenty_status WHERE id =" + id + "\"");
+			  ResultSet result = statement.executeQuery("SELECT * FROM SR_DEV.mst_warrenty_status WHERE id = " + id+ ";");
+
 			while(result.next()) {
-				  mst_warrenty_status = new mst_warrenty_status_pojo(result.getInt(1), result.getString("name"),result.getString("code"), result.getString("description"), result.getInt(1));
+				  mst_warrenty_status = new mst_warrenty_status_pojo(result.getInt(1), result.getString("name"),result.getString("code"), result.getString("description"), result.getInt(1),result.getDate("created_at"),result.getDate("modified_at"));
 		        }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -40,10 +41,19 @@ public class mst_warrenty_status_DAO {
 		return mst_warrenty_status;
 	}
    
-	public void Updatemst_warrenty_status_Data(mst_warrenty_status_pojo mst_warrenty_status) {
-		
+	
+		public boolean insert_emst_warrenty_status_Data(mst_warrenty_status_pojo mst_warrenty_status) {
+			boolean status = false;
+			  try {
+					 status  =  statement.execute("INSERT INTO SR_DEV.mst_warrenty_status(id, name, code, description, is_active, created_at, modified_at)VALUES("+mst_warrenty_status.getId()+", "+mst_warrenty_status.getName()+", "+mst_warrenty_status.getCode()+", "+mst_warrenty_status.getDescription()+", "+mst_warrenty_status.getDescription()+");");
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			  return status;
+		}
 	}
 	
 	
 	
-}
+
