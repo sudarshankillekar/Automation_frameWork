@@ -13,7 +13,8 @@ public class Runner {
 	//mst_warrenty_status_pojo mst_warrenty_status_pojo = new mst_warrenty_status_pojo(3, "jus", "other", "in_warrenty", 3);
 	mst_warrenty_status_pojo mst_warrenty_status_pojo = new mst_warrenty_status_pojo(1, "test", "test", "test", 2, currentDate, currentDate );
 	mst_warrenty_status_DAO.insert_emst_warrenty_status_Data(mst_warrenty_status_pojo) ;
-//	test
+//	tes
+	//t
 	
 }
 }
