@@ -15,6 +15,6 @@ public class Runner {
 	mst_warrenty_status_DAO.insert_emst_warrenty_status_Data(mst_warrenty_status_pojo) ;
 //	tes
 	//t
-	
+//jj	
 }
 }
