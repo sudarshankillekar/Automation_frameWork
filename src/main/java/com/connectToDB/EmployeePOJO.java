@@ -1,7 +1,7 @@
 package com.connectToDB;
 
 public class EmployeePOJO {
-	    private int employeeId;
+	    private int employee_id;
 	    private String employeeName;
 	    private String department;
 	    private double salary;
@@ -9,21 +9,21 @@ public class EmployeePOJO {
 	
 
 	    // Parameterized constructor
-	    public EmployeePOJO(int employeeId, String employeeName, String department, double salary) {
+	    public EmployeePOJO(int employee_id, String employeeName, String department, double salary) {
 	        super();
-	    	this.employeeId = employeeId;
+	    	this.employee_id = employee_id;
 	        this.employeeName = employeeName;
 	        this.department = department;
 	        this.salary = salary;
 	    }
 
 	    // Getters and Setters for each field
-	    public int getEmployeeId() {
-	        return employeeId;
+	    public int getemployee_id() {
+	        return employee_id;
 	    }
 
-	    public void setEmployeeId(int employeeId) {
-	        this.employeeId = employeeId;
+	    public void setemployee_id(int employee_id) {
+	        this.employee_id = employee_id;
 	    }
 
 	    public String getEmployeeName() {
@@ -54,7 +54,7 @@ public class EmployeePOJO {
 	    @Override
 	    public String toString() {
 	        return "Employee{" +
-	                "employeeId=" + employeeId +
+	                "employee_id=" + employee_id +
 	                ", employeeName='" + employeeName + '\'' +
 	                ", department='" + department + '\'' +
 	                ", salary=" + salary +
