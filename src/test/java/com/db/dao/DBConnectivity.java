@@ -1,9 +1,13 @@
-package com.connectToDB;
+package com.db.dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import com.util.Testutility;
+
+import static com.util.Testutility.*;
 public class DBConnectivity {
 
 	private static Connection connection;
@@ -11,7 +15,12 @@ public class DBConnectivity {
 	
 	private DBConnectivity() {
 		try {
-			Connection connection = DriverManager.getConnection("jdbc:mysql://139.59.91.96:3306/SR_DEV", "produser", "qweQWe123!");
+			 try {
+				connection = DriverManager.getConnection(Testutility.getPropertFrom("qa.properties", "DB_URL"), Testutility.getPropertFrom("qa.properties", "DB_USER_NAME"), Testutility.getPropertFrom("qa.properties", "DB_PASSWORD"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
