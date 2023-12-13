@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.api.tests.SearchJobApiTest">
+      <class name="com.api.tests.CreateJobApiRequest">
         <methods>
           <include name="setup"/>
-          <include name="loginApiTest"/>
+          <include name="test_if_data_entered_correctly_in_DB"/>
+          <include name="Test_api_create_joB"/>
         </methods>
-      </class> <!-- com.api.tests.SearchJobApiTest -->
+      </class> <!-- com.api.tests.CreateJobApiRequest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
