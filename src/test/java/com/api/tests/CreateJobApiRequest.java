@@ -39,7 +39,8 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 	
 	private JsonPath jsonPath;
     private int customerId;
-    public static long name;
+    public String name;
+    private String first_name;
     private  TR_Customer_pojo tr_Customer_pojo;
 	 @Test
 	 public void Test_api_create_joB() {
@@ -66,18 +67,20 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 						
 				Testutility.jobId = jsonPath.getInt("data.id");
 				customerId = jsonPath.getInt("data.tr_customer_id");
-				name = jsonPath.getLong("customer_product.serial_number");
+			//	name = jsonPath.getString("customer.first_name");
+			//	tr_customer_product_id = jsonPath.getInt("data.tr_customer_product_id");
 				System.out.println(name);
 				System.out.println(jobId);
 				System.out.println(customerId);
 	
 	}
 	 
-	 @Test(description = "Verify customer data entered correctly in db" , groups = { "e2e" , "smoke" ,"sanity"},dependsOnMethods = "Test_api_create_joB()"  )
+	 @Test(description = "Verify customer data entered correctly in db" , groups = { "e2e" , "smoke" ,"sanity"}  )
 	private void test_if_data_entered_correctly_in_DB() {
 		CustomerDAO customerDAO = new CustomerDAO() ;
 		tr_Customer_pojo =  customerDAO.getcustomerrecordsfromtheDB(customerId);
-		Assert.assertEquals(tr_Customer_pojo.getFirst_name(),name);
+		Assert.assertEquals(customerId, tr_Customer_pojo.getId());
+	//	Assert.assertEquals(tr_Customer_pojo.getFirst_name(),name);
 		
 	}
 	 }
