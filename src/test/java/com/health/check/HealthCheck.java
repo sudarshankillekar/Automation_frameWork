@@ -23,6 +23,6 @@ public class HealthCheck  {
 	public void test_db_connect() {
 		Assert.assertEquals(DBConnectivity.getConnection(),null);
 	}
-
+//tes
 	
 }
