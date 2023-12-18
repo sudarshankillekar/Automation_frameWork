@@ -24,5 +24,5 @@ public class HealthCheck  {
 		Assert.assertEquals(DBConnectivity.getConnection(),null);
 	}
 //tes
-	
+//test		
 }
