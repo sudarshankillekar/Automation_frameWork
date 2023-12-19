@@ -81,7 +81,7 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 		tr_Customer_pojo =  customerDAO.getcustomerrecordsfromtheDB(customerId);
 		Assert.assertEquals(customerId, tr_Customer_pojo.getId());
 	//	Assert.assertEquals(tr_Customer_pojo.getFirst_name(),name);
-		
+		//test
 	}
 	 }
 
