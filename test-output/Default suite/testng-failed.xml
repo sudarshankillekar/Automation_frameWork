@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.health.check.HealthCheck">
+      <class name="com.api.tests.LoginApiTest">
         <methods>
+          <include name="loginApiTest"/>
           <include name="setup"/>
-          <include name="Verify_if_Api_component_is_running"/>
         </methods>
-      </class> <!-- com.health.check.HealthCheck -->
+      </class> <!-- com.api.tests.LoginApiTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
