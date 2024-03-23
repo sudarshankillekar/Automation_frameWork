@@ -15,10 +15,11 @@ public class Runner {
 	XmlSuite xmlSuite = new XmlSuite();
 	xmlSuite.setName("My TestNG TEST");
 	xmlSuite.setVerbose(1);
+	//add code to add listeners in this line 
 	
 	XmlTest xmlTest = new XmlTest(xmlSuite);
 	xmlTest.setName("My Regression Tests");
-	xmlTest.addIncludedGroup("e2e");
+//mlTest.addIncludedGroup("e2e");
 	XmlPackage xmlPackage = new XmlPackage("com.api.tests");
 	
 	List<XmlPackage> xmlPackagelist = new ArrayList<XmlPackage>();

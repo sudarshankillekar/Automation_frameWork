@@ -2,22 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [My TestNG TEST]">
   <test thread-count="5" name="My Regression Tests(failed)">
-    <groups>
-      <run>
-        <include name="e2e"/>
-      </run>
-    </groups>
     <classes>
-      <class name="com.api.tests.LoginApiTest">
+      <class name="com.api.tests.SearchJobApiTest">
         <methods>
+          <include name="setup"/>
           <include name="loginApiTest"/>
         </methods>
-      </class> <!-- com.api.tests.LoginApiTest -->
-      <class name="com.api.tests.CreateJobApiRequest">
-        <methods>
-          <include name="test_if_data_entered_correctly_in_DB"/>
-        </methods>
-      </class> <!-- com.api.tests.CreateJobApiRequest -->
+      </class> <!-- com.api.tests.SearchJobApiTest -->
     </classes>
   </test> <!-- My Regression Tests(failed) -->
 </suite> <!-- Failed suite [My TestNG TEST] -->
