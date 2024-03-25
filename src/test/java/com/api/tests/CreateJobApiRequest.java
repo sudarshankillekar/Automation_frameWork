@@ -17,6 +17,7 @@ import org.hamcrest.Matchers;
 import org.hamcrest.Matchers.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.pojo.CreateJobPojo;
@@ -34,6 +35,8 @@ import static com.util.Testutility.*;
 import io.restassured.http.Header;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
+@Listeners(com.listeners.myListener.class)
 
 public final class CreateJobApiRequest extends ApiTestBase  {
 	

@@ -22,13 +22,18 @@
         
         <configuration>
 			<scope>test</scope>
-			<addclasspath>true</addclasspath>
+			<addclasspath>true</addclasspath>  
 			<mainClass>com.Runner.Runner</mainClass>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
+	  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
 	  <dependency>
     <groupId>com.google.code.gson</groupId>
     <artifactId>gson</artifactId>
