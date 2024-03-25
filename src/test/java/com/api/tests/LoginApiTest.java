@@ -28,7 +28,7 @@ public final class LoginApiTest extends  ApiTestBase {
 	File  jsonFilePath = new File( "C:\\Users\\Lenovo\\eclipse-workspace\\PhoenixAutomationFrameWork\\src\\test\\resources\\responseSchema\\loginResponseSchema.json");
 	
 	
-	@Test(description = "verify login using api request and check message as Success", groups = {"e2e"})
+	@Test(description = "verify login using api request and check message as Success", groups = {"e2e"} ,retryAnalyzer = com.util.MyRetryAnalyzer.class)
 	public void loginApiTest() throws IOException {
 	 jsonPath =    given()
 		.header(new Header("Content-Type", "application/json"))

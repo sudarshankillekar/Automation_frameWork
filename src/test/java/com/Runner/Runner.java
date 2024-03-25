@@ -15,7 +15,7 @@ public class Runner {
 	XmlSuite xmlSuite = new XmlSuite();
 	xmlSuite.setName("My TestNG TEST");
 	xmlSuite.setVerbose(1);
-	//add code to add listeners in this line 
+    xmlSuite.addListener("com.listeners.myListener");
 	
 	XmlTest xmlTest = new XmlTest(xmlSuite);
 	xmlTest.setName("My Regression Tests");
