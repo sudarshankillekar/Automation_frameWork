@@ -21,9 +21,12 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import java.io.*;
-
+import org.junit.jupiter.api.*;
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Order(1)
 public final class LoginApiTest extends  ApiTestBase {
 	
+
 	JsonPath jsonPath;
 	File  jsonFilePath = new File( "C:\\Users\\Lenovo\\eclipse-workspace\\PhoenixAutomationFrameWork\\src\\test\\resources\\responseSchema\\loginResponseSchema.json");
 	

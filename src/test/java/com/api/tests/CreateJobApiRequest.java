@@ -15,6 +15,9 @@ import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.hamcrest.Matchers.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -24,6 +27,7 @@ import com.api.pojo.CreateJobPojo;
 import com.api.pojo.LoginApiPojo;
 import com.db.pojo.CustomerDAO;
 import com.db.pojo.TR_Customer_pojo;
+import com.util.DataUtils;
 import com.util.ROLE;
 import com.util.Testutility;
 
@@ -37,7 +41,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 @Listeners(com.listeners.myListener.class)
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Order(2)
 public final class CreateJobApiRequest extends ApiTestBase  {
 	
 	private JsonPath jsonPath;
@@ -67,12 +72,12 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 						    .body("data.tr_customer_id", notNullValue())
 							.and()
 						.extract().jsonPath();
-						
+				
+				DataUtils.storeData("jobId", jsonPath.getInt("data.id"));
 				Testutility.jobId = jsonPath.getInt("data.id");
 				customerId = jsonPath.getInt("data.tr_customer_id");
 			//	name = jsonPath.getString("customer.first_name");
 			//	tr_customer_product_id = jsonPath.getInt("data.tr_customer_product_id");
-				System.out.println(name);
 				System.out.println(jobId);
 				System.out.println(customerId);
 	

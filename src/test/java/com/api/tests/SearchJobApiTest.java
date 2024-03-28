@@ -1,6 +1,7 @@
 package com.api.tests;
 
 import com.api.pojo.*;
+import com.util.DataUtils;
 import com.util.Testutility;
 
 import static org.hamcrest.Matcher.*;
@@ -12,6 +13,9 @@ import java.sql.Time;
 
 import org.hamcrest.Matchers;
 import org.hamcrest.core.StringContains;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -22,12 +26,14 @@ import io.restassured.http.Header;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Order(3)
 public final class SearchJobApiTest extends  ApiTestBase {
 	
 	JsonPath jsonPath;
 	
-	
+	// int jobId = DataUtils.getData("jobId", Integer.class);
+	int jobId = 30179;
 	@Test(description = "verify login using api request and check message as Success")
 	public void loginApiTest() throws IOException {
 	 jsonPath =    given()

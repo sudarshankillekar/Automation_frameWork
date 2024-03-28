@@ -1,14 +1,14 @@
 package com.util;
 
 import static io.restassured.RestAssured.given;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.hamcrest.Matchers;
-
+import java.util.HashMap;
+import java.util.Map;
 import com.api.pojo.CreateJobPojo;
 import com.api.pojo.Customer;
 import com.api.pojo.CustomerProduct;
@@ -30,6 +30,15 @@ public class Testutility {
 	
 	public static int jobId ;
 	
+	 private static Map<String, Object> sharedData = new HashMap<>();
+
+	    public static void storeData(String key, Object value) {
+	        sharedData.put(key, value);
+	    }
+
+	    public static <T> T getData(String key, Class<T> clazz) {
+	        return clazz.cast(sharedData.get(key));
+	    }
 	
 	
 	 public static  String convertPOJOToJSON (Object data) {
