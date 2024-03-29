@@ -2,6 +2,7 @@ package com.api.tests;
 
 import com.api.pojo.*;
 import com.util.DataUtils;
+import com.util.ROLE;
 import com.util.Testutility;
 
 import static org.hamcrest.Matcher.*;
@@ -9,6 +10,8 @@ import static org.hamcrest.Matcher.*;
 import static io.restassured.RestAssured.*;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Time;
 
 import org.hamcrest.Matchers;
@@ -30,14 +33,18 @@ import io.restassured.response.Response;
 @Order(3)
 public final class SearchJobApiTest extends  ApiTestBase {
 	
-	JsonPath jsonPath;
 	
-	// int jobId = DataUtils.getData("jobId", Integer.class);
-	int jobId = 30179;
+
+	JsonPath jsonPath;
+	String jobId = Testutility.getJobIdFromFile("data.txt");
+	//String jobId ;
+	//String jobId = DataUtils.getData("jobId", String.class);
+	//String jobId = "JOB_30179";
 	@Test(description = "verify login using api request and check message as Success")
 	public void loginApiTest() throws IOException {
 	 jsonPath =    given()
 		.header(new Header("Content-Type", "application/json"))
+		.header(new Header("Authorization", getAuthToken(ROLE.FD)))
 		.body(new  SearchjobApirequest(jobId))
 		.when()
 		      .log().all()

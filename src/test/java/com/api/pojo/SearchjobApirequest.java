@@ -2,23 +2,24 @@ package com.api.pojo;
 
 public class SearchjobApirequest {
 
-	private int searchText ;
+	private String searchText;
 
-	public SearchjobApirequest(int search_job) {
-		super();
-		searchText = search_job;
-	}
+    // Default constructor (needed for serialization/deserialization)
+    public SearchjobApirequest() {
+    }
 
-	public int getSearch_job() {
-		return searchText;
-	}
+    // Parameterized constructor
+    public SearchjobApirequest(String searchText) {
+        this.searchText = searchText;
+    }
 
-	public void setSearch_job(int search_job) {
-		searchText = searchText;
-	}
+    // Getter for searchText
+    public String getSearchText() {
+        return searchText;
+    }
 
-	@Override
-	public String toString() {
-		return "SearchjobApirequest [searchText=" + searchText + "]";
-	}
+    // Setter for searchText
+    public void setSearchText(String searchText) {
+        this.searchText = searchText;
+    }
 }

@@ -17,7 +17,10 @@ import com.api.pojo.Problems;
 import com.api.pojo.customer_address;
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
-
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import io.restassured.http.Header;
 import io.restassured.mapper.ObjectMapper;
 import io.restassured.path.json.JsonPath;
@@ -25,22 +28,31 @@ import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 
 public class Testutility {
-	JsonPath jsonPath;
+	public JsonPath jsonPath;
 	
 	
-	public static int jobId ;
+	public static String jobId ;
 	
-	 private static Map<String, Object> sharedData = new HashMap<>();
-
-	    public static void storeData(String key, Object value) {
-	        sharedData.put(key, value);
+	  public static String getJobIdFromFile(String fileName) {
+	        String jobId = null;
+	        try {
+	            // Read the job ID from the file
+	            byte[] bytes = Files.readAllBytes(Paths.get(fileName));
+	            jobId = new String(bytes, StandardCharsets.UTF_8);
+	            clearJobIdFile(fileName); // Clear the file after reading the job ID
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	        return jobId;
 	    }
-
-	    public static <T> T getData(String key, Class<T> clazz) {
-	        return clazz.cast(sharedData.get(key));
+	   public static void clearJobIdFile(String fileName) {
+	        try {
+	            // Clear the content of the file
+	            Files.write(Paths.get(fileName), new byte[0]);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
 	    }
-	
-	
 	 public static  String convertPOJOToJSON (Object data) {
 		 Gson gson = new Gson();
 		 String result = gson.toJson(data); 

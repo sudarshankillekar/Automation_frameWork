@@ -30,7 +30,9 @@ import com.db.pojo.TR_Customer_pojo;
 import com.util.DataUtils;
 import com.util.ROLE;
 import com.util.Testutility;
-
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 
 
@@ -73,9 +75,17 @@ public final class CreateJobApiRequest extends ApiTestBase  {
 							.and()
 						.extract().jsonPath();
 				
-				DataUtils.storeData("jobId", jsonPath.getInt("data.id"));
-				Testutility.jobId = jsonPath.getInt("data.id");
+				DataUtils.storeData("jobId", jsonPath.getString("data.job_number"));
+				Testutility.jobId = jsonPath.getString("data.job_number");
 				customerId = jsonPath.getInt("data.tr_customer_id");
+				   try {
+			            FileOutputStream fos = new FileOutputStream("data.txt");
+			            fos.write(jobId.getBytes(StandardCharsets.UTF_8));
+			            fos.close();
+			        } catch (IOException e) {
+			            e.printStackTrace();
+			        }
+			    
 			//	name = jsonPath.getString("customer.first_name");
 			//	tr_customer_product_id = jsonPath.getInt("data.tr_customer_product_id");
 				System.out.println(jobId);
