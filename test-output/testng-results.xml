@@ -1,55 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-30T02:12:00 IST" name="My TestNG TEST" finished-at="2024-03-30T02:12:10 IST" duration-ms="10417">
+  <suite started-at="2024-03-31T20:41:15 IST" name="Default suite" finished-at="2024-03-31T20:41:24 IST" duration-ms="8482">
     <groups>
       <group name="smoke">
-        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
+        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
       </group> <!-- smoke -->
       <group name="sanity">
-        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
+        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
       </group> <!-- sanity -->
       <group name="e2e">
-        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
-        <method signature="LoginApiTest.loginApiTest()[pri:0, instance:com.api.tests.LoginApiTest@38c6f217]" name="loginApiTest" class="com.api.tests.LoginApiTest"/>
+        <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2024-03-30T02:12:00 IST" name="My Regression Tests" finished-at="2024-03-30T02:12:10 IST" duration-ms="10417">
-      <class name="com.api.tests.SearchJobApiTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.SearchJobApiTest@9597028]" started-at="2024-03-30T02:12:10 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-03-30T02:12:10 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="loginApiTest()[pri:0, instance:com.api.tests.SearchJobApiTest@9597028]" started-at="2024-03-30T02:12:10 IST" name="loginApiTest" description="verify login using api request and check message as Success" finished-at="2024-03-30T02:12:10 IST" duration-ms="878" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginApiTest -->
-      </class> <!-- com.api.tests.SearchJobApiTest -->
+    <test started-at="2024-03-31T20:41:15 IST" name="Default test" finished-at="2024-03-31T20:41:24 IST" duration-ms="8482">
       <class name="com.api.tests.CreateJobApiRequest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" started-at="2024-03-30T02:12:00 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-03-30T02:12:01 IST" duration-ms="857" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:15 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-03-31T20:41:16 IST" duration-ms="989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test_api_create_joB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" started-at="2024-03-30T02:12:01 IST" name="Test_api_create_joB" finished-at="2024-03-30T02:12:07 IST" duration-ms="6354" status="PASS">
+        <test-method signature="Test_api_create_joB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:16 IST" name="Test_api_create_joB" finished-at="2024-03-31T20:41:22 IST" duration-ms="5364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_api_create_joB -->
-        <test-method signature="test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6ae5aa72]" started-at="2024-03-30T02:12:07 IST" name="test_if_data_entered_correctly_in_DB" description="Verify customer data entered correctly in db" finished-at="2024-03-30T02:12:08 IST" duration-ms="1215" status="PASS">
+        <test-method signature="test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:22 IST" name="test_if_data_entered_correctly_in_DB" description="Verify customer data entered correctly in db" finished-at="2024-03-31T20:41:24 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_if_data_entered_correctly_in_DB -->
       </class> <!-- com.api.tests.CreateJobApiRequest -->
-      <class name="com.api.tests.LoginApiTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.LoginApiTest@38c6f217]" started-at="2024-03-30T02:12:08 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-03-30T02:12:08 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="loginApiTest()[pri:0, instance:com.api.tests.LoginApiTest@38c6f217]" started-at="2024-03-30T02:12:08 IST" name="loginApiTest" description="verify login using api request and check message as Success" finished-at="2024-03-30T02:12:09 IST" duration-ms="1002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginApiTest -->
-      </class> <!-- com.api.tests.LoginApiTest -->
-    </test> <!-- My Regression Tests -->
-  </suite> <!-- My TestNG TEST -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
