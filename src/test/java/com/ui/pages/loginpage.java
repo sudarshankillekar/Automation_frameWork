@@ -2,6 +2,8 @@ package com.ui.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import com.util.BrowserUtility;
 
 public final class loginpage extends BrowserUtility{
@@ -15,6 +17,11 @@ public final class loginpage extends BrowserUtility{
 		goToWebSite("http://phoenix.testautomationacademy.in/sign-in");
 	}
     
+	public loginpage(ChromeDriver wd) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void dologinwith(String userName, String password) {
 		clearText(USERNAMETEXRBOXLOCATOR);		
 		enterTextInto(USERNAMETEXRBOXLOCATOR, userName);
