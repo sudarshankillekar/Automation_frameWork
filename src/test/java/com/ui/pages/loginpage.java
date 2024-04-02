@@ -12,22 +12,21 @@ public final class loginpage extends BrowserUtility{
 	private static final By PASSWORDTEXRBOXLOCATOR = By.id("password");
 	private static final By LOGINBUTTONLOCATOR = By.xpath("//span[contains(text(),\" Sign in \")]/../..");
 	
-	public loginpage(WebDriver wd) {
+	public loginpage(ChromeDriver wd) {
 		super(wd);
 		goToWebSite("http://phoenix.testautomationacademy.in/sign-in");
 	}
     
-	public loginpage(ChromeDriver wd) {
-		// TODO Auto-generated constructor stub
-	}
 
 
-	public void dologinwith(String userName, String password) {
+
+	public DashBoardPage dologinwith(String userName, String password) {
 		clearText(USERNAMETEXRBOXLOCATOR);		
 		enterTextInto(USERNAMETEXRBOXLOCATOR, userName);
 		clearText(PASSWORDTEXRBOXLOCATOR);
 		enterTextInto(PASSWORDTEXRBOXLOCATOR, password);
-		clickOn(LOGINBUTTONLOCATOR);		
+		clickOn(LOGINBUTTONLOCATOR);	
+		return new DashBoardPage(getWd());
 	}
 	
 }
