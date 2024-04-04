@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-31T20:41:15 IST" name="Default suite" finished-at="2024-03-31T20:41:24 IST" duration-ms="8482">
+  <suite started-at="2024-04-04T14:30:56 IST" name="Default suite" finished-at="2024-04-04T14:31:05 IST" duration-ms="8978">
     <groups>
       <group name="smoke">
         <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
@@ -14,17 +14,17 @@
         <method signature="CreateJobApiRequest.test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" name="test_if_data_entered_correctly_in_DB" class="com.api.tests.CreateJobApiRequest"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2024-03-31T20:41:15 IST" name="Default test" finished-at="2024-03-31T20:41:24 IST" duration-ms="8482">
+    <test started-at="2024-04-04T14:30:56 IST" name="Default test" finished-at="2024-04-04T14:31:05 IST" duration-ms="8978">
       <class name="com.api.tests.CreateJobApiRequest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:15 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-03-31T20:41:16 IST" duration-ms="989" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-04-04T14:30:56 IST" name="setup" description="setting up the base URL for the API using config file" finished-at="2024-04-04T14:30:57 IST" duration-ms="859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test_api_create_joB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:16 IST" name="Test_api_create_joB" finished-at="2024-03-31T20:41:22 IST" duration-ms="5364" status="PASS">
+        <test-method signature="Test_api_create_joB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-04-04T14:30:57 IST" name="Test_api_create_joB" finished-at="2024-04-04T14:31:04 IST" duration-ms="6685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_api_create_joB -->
-        <test-method signature="test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-03-31T20:41:22 IST" name="test_if_data_entered_correctly_in_DB" description="Verify customer data entered correctly in db" finished-at="2024-03-31T20:41:24 IST" duration-ms="2008" status="PASS">
+        <test-method signature="test_if_data_entered_correctly_in_DB()[pri:0, instance:com.api.tests.CreateJobApiRequest@6574a52c]" started-at="2024-04-04T14:31:04 IST" name="test_if_data_entered_correctly_in_DB" description="Verify customer data entered correctly in db" finished-at="2024-04-04T14:31:05 IST" duration-ms="1330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_if_data_entered_correctly_in_DB -->
