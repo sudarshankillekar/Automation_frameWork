@@ -16,8 +16,8 @@ public class loginPageTest  {
 		DashBoardPage dashBoardPage = onLoginpage.dologinwith("iamfd", "password");
 		boolean status = dashBoardPage.openJobCreatedTodayTable().searchForjob("JOB_30438");
 		System.out.println(status);
-//		GlobalListPage globalListPage = dashBoardPage.searchForJobUsing("JOB_28957");
-//		System.out.println(globalListPage.getJobDetails());
+		GlobalListPage globalListPage = dashBoardPage.searchForJobUsing("JOB_28957");
+		System.out.println(globalListPage.getJobDetails());
 	}
 
 }
